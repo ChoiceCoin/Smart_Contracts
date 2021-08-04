@@ -8,5 +8,5 @@ Stateful refers to the contract’s ability to store information in a specific s
 Stateless Smart Contracts differ in that they validate transactions between parties, like an escrow and more like a contract in the traditional sense. Stateless Smart Contracts on the Algorand Network also act as signature delegators,  signing transactions, thus validating them on the main blockchain network. By analogy, many describe Stateless Smart Contracts as essentially equivalent to escrow functions.  Indeed, the essential design purpose for Stateless Smart Contracts were to approve or deny blockchain transactions.
 
 # Algogeneous
-Representing a technical convergence of Stateless and Stateful Smart Contracts, Algogeneous Smart Contracts include an innovative integration with artificial intelligence. Where previous ASCs must be stateful or stateless, Algogeneous contracts may be stateful, stateless, or both.!
+Representing a technical convergence of Stateless and Stateful Smart Contracts, Algogeneous Smart Contracts include an innovative integration with artificial intelligence. Where previous ASCs must be stateful or stateless, Algogeneous contracts may be stateful, stateless, or both.
 

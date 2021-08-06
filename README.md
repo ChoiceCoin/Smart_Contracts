@@ -10,3 +10,17 @@ Stateless Smart Contracts differ in that they validate transactions between part
 # Algogeneous
 Representing a technical convergence of Stateless and Stateful Smart Contracts, Algogeneous Smart Contracts include an innovative integration with artificial intelligence. Where previous ASCs must be stateful or stateless, Algogeneous contracts may be stateful, stateless, or both.
 
+# License
+Copyright Fortior Blockchain, LLLP 2021
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

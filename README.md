@@ -1,4 +1,4 @@
-# Smart_Contacts
+# Smart Contacts
 Alogrand Smart Contracts using Choice Coin. Read Docs for how to implement Algogenous Smart Contracts for your own applications. Smart contracts are programs that automatically execute, transferring cryptocurrency between parties.  In other words, smart contracts are logically executed on a blockchain to transfer assets without only computational or formalized oversight.  Algorand Smart Contracts (ASCs) allow for global payments and financial transactions, with instantaneous processing and only marginal fees – less than $0.01 in total value. As typically described the three types of ASCs are: (1) Stateful Smart Contracts; (2) Stateless Smart Contracts; and (3) Algogeneous Smart Contracts.
 
 # Stateful

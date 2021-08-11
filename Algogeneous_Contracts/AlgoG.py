@@ -108,7 +108,7 @@ def switch_algo(address, receiver_mnemonic,amount,name):
             comment = "This is a smart contract."
             asset_rotate(address,receiver_key,fund_address,asset_2_amount, asset_2_id,comment)
             final = asset_rotate(fund_address, fund_key, address, asset_amount, asset_id,comment)
-            error = 'Congratulations! The switch was successful."
+            error = "Congratulations! The switch was successful."
     else:
         error = "Wrong Algorand Address"
     return error

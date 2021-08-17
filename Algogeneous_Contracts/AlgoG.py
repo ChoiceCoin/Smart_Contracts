@@ -80,7 +80,7 @@ def switch_algo(address, receiver_mnemonic,amount,name):
             comment = "This is a smart contract between "
             algo_flip(address,receiver_key,fund_address,algo_amount,comment)
             final = asset_rotate(fund_address, fund_key, address, Asset_amount, asset_id,comment)
-            error = 'Congratulations! The switch was successful."
+            error = "Congratulations! The switch was successful."
     else:
         error = "Wrong Algorand Address"
     return error

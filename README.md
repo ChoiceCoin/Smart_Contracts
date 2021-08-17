@@ -12,9 +12,6 @@ Representing a technical convergence of Stateless and Stateful Smart Contracts, 
 
 # Docs
 
-# Smart Contracts
-This is a Repository for smart contracts developed on the Algorand Network. A smart contract is a computer program which automatically executes, moving cryptocurrency or some other digital asset. Algorand Smart Contracts (ASCs) are programs serving various functions on the Algorand Blockchain. Specifically, ASCs are software systems that can be used for transactions and applications development. The Repository includes various folders with software code, which are defined below as Files. 
-
 # Files
 
 - The “Algogenous_Contracts” Folder contains examples of  Algogenous Smart Contracts.

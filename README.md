@@ -10,6 +10,31 @@ Stateless Smart Contracts differ in that they validate transactions between part
 # Algogeneous
 Representing a technical convergence of Stateless and Stateful Smart Contracts, Algogeneous Smart Contracts include an innovative integration with artificial intelligence. Where previous ASCs must be stateful or stateless, Algogeneous contracts may be stateful, stateless, or both.
 
+# Docs
+
+# Smart Contracts
+This is a Repository for smart contracts developed on the Algorand Network. A smart contract is a computer program which automatically executes, moving cryptocurrency or some other digital asset. Algorand Smart Contracts (ASCs) are programs serving various functions on the Algorand Blockchain. Specifically, ASCs are software systems that can be used for transactions and applications development. The Repository includes various folders with software code, which are defined below as Files. 
+
+# Files
+
+- The “Algogenous_Contracts” Folder contains examples of  Algogenous Smart Contracts.
+- The “Single_State_Contracts” Folder contains examples of Stateful and Stateless Contracts.
+
+
+
+
+# Dependencies
+- To run the code in the Algogenous_Contracts Folder, you first must have Python installed. Please download the latest version of Python, and create a virutal environment specifcally for this directory. Python Download: https://www.python.org/downloads/.
+- Second, your Python Virtual Envrionment must have all of the packages listed in the *requirements.txt* file, which is also found in the Algogenous_Contracts Folder.
+
+# Run Steps
+- To run the code found in the *Algogenous_Contracts* folder, make sure to first download the dependencies as described above using *pip*.
+- Use Choice Coin or create a new Algorand Standard Asset as described in the *asset_creation.py* file in the *Algogenous_Contracts* folder. Once this is done, change the value of *asset_id* in the *AlgoG.py* file to the id of the asset you just created. Additionally, assign the manager address and mnemonic to the *fund_address* and *fund_mnemonic* variables in the *AlgoG.py* file. 
+- Furthermore, connect to the Algorand Network through a service such as the PureStake API or the Algorand Sandbox, the code was tested using the PureStake API, and assign your new address and token to *algod_address* and *algod_token* respectively.
+- In the *algo_switch* function, found in *AlgoG.py*, change the script exectuable in the *comment* variable to fit organizational or application need.
+- To test code in the Python terminal, import the function you are testing from *AlgoG*, *choice_transaction* for transfer, *request_funds* for the charge function, and *algo_switch* for the Algogenous smart contract. It is reccomended to add a *reciever_address* and *reciever_mnemonic* in the *AlgoG* file for code that is being tested in the terminal to avoid potential errors associated with a copy-paste method. Once this is done, import the *fund_address*, *fund_mnemonic*, *receiver_address*, *receiver_mnemonic*, and *asset_id* variables from *AlgoG*. Then, run the function with the appropriate inputs as described in the *AlgoG* file.
+
+
 # License
 Copyright Fortior Blockchain, LLLP 2021
 

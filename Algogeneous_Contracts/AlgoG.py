@@ -4,8 +4,8 @@ from algosdk import account, encoding, mnemonic,transaction
 from algosdk.future.transaction import AssetTransferTxn, PaymentTxn
 from algosdk.v2client import algod
 
-#This defines an Algogenous Smart Contract for running an switch between an asset such as Choice Coin and other ASAs. 
-#The Algogenous Smart Contract Integrates an embedded intelligence to automatically create a smart contract on the Algorand Blockchain certifying an switch took place.
+#This defines an Algogenous Smart Contract for running a switch between an asset such as Choice Coin and other ASAs. 
+#The Algogenous Smart Contract Integrates an embedded intelligence to automatically create a smart contract on the Algorand Blockchain certifying a switch took place.
 #Connect to the Algorand Client here. 
 algod_address = ""
 algod_token = ""
@@ -44,7 +44,7 @@ def asset_rotate(sender, key, receiver, amount, index,comment):
     return True, final
 
 #This defines an opt-in function for an asset. 
-#It automates the optin process for user accounts who may be purschasing an asset.
+#It automates the optin process for user accounts who may be purchasing an asset.
 def create_optin(receiver_mnemonic,receiver_address,amount,index):
     parameters = algod_client.suggested_params()
     transaction = AssetTransferTxn(receiver_address, parameters, receiver_address, 0, index)

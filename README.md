@@ -21,7 +21,7 @@ Representing a technical convergence of Stateless and Stateful Smart Contracts, 
 
 
 # Dependencies
-- To run the code in the Algogenous_Contracts Folder, you first must have Python installed. Please download the latest version of Python, and create a virutal environment specifcally for this directory. Python Download: https://www.python.org/downloads/.
+- To run the code in the Algogenous_Contracts Folder, you first must have Python installed. Please download the latest version of Python, and create a virtual environment specifcally for this directory. Python Download: https://www.python.org/downloads/.
 - Second, your Python Virtual Envrionment must have all of the packages listed in the *requirements.txt* file, which is also found in the Algogenous_Contracts Folder.
 
 # Run Steps

@@ -1,0 +1,48 @@
+Registration rounds: 19456657 to 19456667
+Vote rounds: 19456668 to 19456678
+Waiting for confirmation...
+Transaction LJBVFJKGNOCIIM6SLLPSH2PIMUAREG3XJW5FF3HBLCALTE2PYQJA confirmed in round 19456649.
+Created new app-id: 67693204
+Global state: {'RegEnd': 19456667, 'VoteBegin': 19456668, 'Creator': 'ZkQgduUW4uFbJqVLW6R1diN5/PmRdTXmqF7E+e1bGqM=', 'VoteEnd': 19456678, 'RegBegin': 19456657}
+Waiting for round 19456657
+Round 19456650
+Round 19456651
+Round 19456652
+Round 19456653
+Round 19456654
+Round 19456655
+Round 19456656
+Round 19456657
+OptIn from account:  MYTNPFZCPLBE7K6OWK4UY3FO3ZML7KJLTCWJWOJ2GJION2HR2CNMUDFS2A
+Waiting for confirmation...
+Transaction DKBVZ6IRRGVDCPJC6LPYOR67TQI277SDWWXJMSRZWZYCCAHVFIXA confirmed in round 19456660.
+OptIn to app-id: 67693204
+Waiting for round 19456668
+Round 19456661
+Round 19456662
+Round 19456663
+Round 19456664
+Round 19456665
+Round 19456666
+Round 19456667
+Round 19456668
+Call from account: MYTNPFZCPLBE7K6OWK4UY3FO3ZML7KJLTCWJWOJ2GJION2HR2CNMUDFS2A
+Waiting for confirmation...
+Transaction OCEJSKILCKWJPFCNS4A6Q4M5PIHN5NOBNAOHTXGVUFWGIQFKIBRA confirmed in round 19456671.
+Local state: {'voted': 'choiceA'}
+Waiting for round 19456678
+Round 19456672
+Round 19456673
+Round 19456674
+Round 19456675
+Round 19456676
+Round 19456677
+Round 19456678
+Global state: {'Creator': 'ZkQgduUW4uFbJqVLW6R1diN5/PmRdTXmqF7E+e1bGqM=', 'RegBegin': 19456657, 'RegEnd': 19456667, 'VoteBegin': 19456668, 'VoteEnd': 19456678, 'choiceA': 1}
+The winner is: choiceA
+Waiting for confirmation...
+Transaction H4C2QSSNT6SVLSW6WO2WIV3HRCG4ANJXGTBM6PEYLJZSC6WOZFKQ confirmed in round 19456681.
+Deleted app-id: 67693204
+Waiting for confirmation...
+Transaction YIJXCEQFHESCVZS7KV5WH6M76DXBP3IGEQYPLVCQILNU7IKAMSUA confirmed in round 19456683.
+Cleared app-id: 67693204

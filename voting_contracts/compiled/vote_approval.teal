@@ -1,0 +1,323 @@
+#pragma version 2
+txn ApplicationID
+int 0
+==
+bnz main_l44
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l43
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l42
+txn OnCompletion
+int OptIn
+==
+bnz main_l37
+txna ApplicationArgs 0
+byte "vote"
+==
+bnz main_l25
+txna ApplicationArgs 0
+byte "add_options"
+==
+bnz main_l7
+err
+main_l7:
+global LatestTimestamp
+byte "voting_start_time"
+app_global_get
+>
+bnz main_l24
+txna ApplicationArgs 1
+byte "NULL_OPTION"
+!=
+bnz main_l23
+int 1
+return
+main_l10:
+txna ApplicationArgs 2
+byte "NULL_OPTION"
+!=
+bnz main_l22
+int 1
+return
+main_l12:
+txna ApplicationArgs 3
+byte "NULL_OPTION"
+!=
+bnz main_l21
+int 1
+return
+main_l14:
+txna ApplicationArgs 4
+byte "NULL_OPTION"
+!=
+bnz main_l20
+int 1
+return
+main_l16:
+txna ApplicationArgs 5
+byte "NULL_OPTION"
+!=
+bnz main_l19
+int 1
+return
+main_l18:
+int 1
+return
+main_l19:
+byte "option_"
+txna ApplicationArgs 5
+concat
+int 4294967296
+app_global_put
+b main_l18
+main_l20:
+byte "option_"
+txna ApplicationArgs 4
+concat
+int 4294967296
+app_global_put
+b main_l16
+main_l21:
+byte "option_"
+txna ApplicationArgs 3
+concat
+int 4294967296
+app_global_put
+b main_l14
+main_l22:
+byte "option_"
+txna ApplicationArgs 2
+concat
+int 4294967296
+app_global_put
+b main_l12
+main_l23:
+byte "option_"
+txna ApplicationArgs 1
+concat
+int 4294967296
+app_global_put
+b main_l10
+main_l24:
+int 0
+return
+main_l25:
+global LatestTimestamp
+byte "voting_start_time"
+app_global_get
+<
+bnz main_l36
+global LatestTimestamp
+byte "voting_end_time"
+app_global_get
+>
+bnz main_l35
+int 0
+byte "option_"
+txna ApplicationArgs 1
+concat
+app_global_get_ex
+store 2
+store 3
+load 2
+bnz main_l29
+int 0
+return
+main_l29:
+int 0
+byte "QVoteDecisionCredits"
+int 0
+byte "QVoteDecisionCredits"
+app_local_get
+txna ApplicationArgs 2
+btoi
+txna ApplicationArgs 2
+btoi
+*
+-
+app_local_put
+int 0
+byte "QVoteDecisionCredits"
+app_local_get
+int 0
+>=
+bnz main_l32
+int 0
+return
+main_l31:
+int 1
+return
+main_l32:
+txna ApplicationArgs 3
+byte "-"
+==
+bnz main_l34
+byte "option_"
+txna ApplicationArgs 1
+concat
+load 3
+txna ApplicationArgs 2
+btoi
++
+app_global_put
+b main_l31
+main_l34:
+byte "option_"
+txna ApplicationArgs 1
+concat
+load 3
+txna ApplicationArgs 2
+btoi
+-
+app_global_put
+b main_l31
+main_l35:
+int 0
+return
+main_l36:
+int 0
+return
+main_l37:
+global LatestTimestamp
+byte "voting_start_time"
+app_global_get
+>
+bnz main_l41
+int 0
+byte "asset_id"
+app_global_get
+asset_holding_get AssetBalance
+store 0
+store 1
+load 0
+bnz main_l40
+int 0
+return
+main_l40:
+int 0
+byte "QVoteDecisionCredits"
+load 1
+byte "asset_coefficient"
+app_global_get
+*
+app_local_put
+int 1
+return
+main_l41:
+int 0
+return
+main_l42:
+int 0
+return
+main_l43:
+int 0
+return
+main_l44:
+byte "Creator"
+txn Sender
+app_global_put
+byte "Name"
+txna ApplicationArgs 0
+app_global_put
+byte "asset_id"
+txna ApplicationArgs 6
+btoi
+app_global_put
+byte "asset_coefficient"
+txna ApplicationArgs 7
+btoi
+app_global_put
+byte "voting_start_time"
+txna ApplicationArgs 8
+btoi
+app_global_put
+byte "voting_end_time"
+txna ApplicationArgs 9
+btoi
+app_global_put
+global LatestTimestamp
+byte "voting_start_time"
+app_global_get
+>
+bnz main_l61
+txna ApplicationArgs 1
+byte "NULL_OPTION"
+!=
+bnz main_l60
+int 1
+return
+main_l47:
+txna ApplicationArgs 2
+byte "NULL_OPTION"
+!=
+bnz main_l59
+int 1
+return
+main_l49:
+txna ApplicationArgs 3
+byte "NULL_OPTION"
+!=
+bnz main_l58
+int 1
+return
+main_l51:
+txna ApplicationArgs 4
+byte "NULL_OPTION"
+!=
+bnz main_l57
+int 1
+return
+main_l53:
+txna ApplicationArgs 5
+byte "NULL_OPTION"
+!=
+bnz main_l56
+int 1
+return
+main_l55:
+int 1
+return
+int 1
+return
+main_l56:
+byte "option_"
+txna ApplicationArgs 5
+concat
+int 4294967296
+app_global_put
+b main_l55
+main_l57:
+byte "option_"
+txna ApplicationArgs 4
+concat
+int 4294967296
+app_global_put
+b main_l53
+main_l58:
+byte "option_"
+txna ApplicationArgs 3
+concat
+int 4294967296
+app_global_put
+b main_l51
+main_l59:
+byte "option_"
+txna ApplicationArgs 2
+concat
+int 4294967296
+app_global_put
+b main_l49
+main_l60:
+byte "option_"
+txna ApplicationArgs 1
+concat
+int 4294967296
+app_global_put
+b main_l47
+main_l61:
+int 0
+return

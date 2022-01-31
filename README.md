@@ -31,18 +31,3 @@ Representing a technical convergence of Stateless and Stateful Smart Contracts, 
 - In the *algo_switch* function, found in *AlgoG.py*, change the script exectuable in the *comment* variable to fit organizational or application need.
 - To test code in the Python terminal, import the function you are testing from *AlgoG*, *choice_transaction* for transfer, *request_funds* for the charge function, and *algo_switch* for the Algogenous smart contract. It is reccomended to add a *reciever_address* and *reciever_mnemonic* in the *AlgoG* file for code that is being tested in the terminal to avoid potential errors associated with a copy-paste method. Once this is done, import the *fund_address*, *fund_mnemonic*, *receiver_address*, *receiver_mnemonic*, and *asset_id* variables from *AlgoG*. Then, run the function with the appropriate inputs as described in the *AlgoG* file.
 
-
-# License
-Copyright Fortior Blockchain, LLLP 2021
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.

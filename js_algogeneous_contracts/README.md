@@ -1,4 +1,4 @@
-# Smart-Contracts
+# Smart-Contracts with Javascript
 
 ## check video on youtube
 

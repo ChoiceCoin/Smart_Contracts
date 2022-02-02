@@ -1,0 +1,14 @@
+{
+  "name": "asset_creation",
+  "version": "1.0.0",
+  "description": "This is how to use smart contracts with algorand standard assets with algorand javascript",
+  "main": "asset_creation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Aspirin",
+  "license": "ISC",
+  "dependencies": {
+    "algosdk": "^1.13.1"
+  }
+}

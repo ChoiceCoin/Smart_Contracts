@@ -1,0 +1,268 @@
+#pragma version 5
+txn ApplicationID
+int 0
+==
+bnz main_l36
+txn OnCompletion
+int OptIn
+==
+bnz main_l35
+txn OnCompletion
+int CloseOut
+==
+bnz main_l34
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l33
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l32
+txn OnCompletion
+int NoOp
+==
+bnz main_l7
+err
+main_l7:
+txna ApplicationArgs 0
+byte "fund"
+==
+bnz main_l31
+txna ApplicationArgs 0
+byte "withdraw"
+==
+bnz main_l30
+txna ApplicationArgs 0
+byte "loan"
+==
+bnz main_l13
+txna ApplicationArgs 0
+byte "redeem"
+==
+bnz main_l12
+err
+main_l12:
+itxn_begin
+int pay
+itxn_field TypeEnum
+global CreatorAddress
+itxn_field Receiver
+global CurrentApplicationAddress
+balance
+byte "total"
+app_global_get
+-
+global CurrentApplicationAddress
+min_balance
+-
+global MinTxnFee
+-
+itxn_field Amount
+itxn_submit
+int 1
+return
+main_l13:
+int 0
+store 1
+int 0
+store 0
+main_l14:
+load 0
+global GroupSize
+<
+bnz main_l22
+int 0
+store 0
+main_l16:
+load 0
+global GroupSize
+<
+bnz main_l18
+int 0
+return
+main_l18:
+load 0
+gtxns Receiver
+global CurrentApplicationAddress
+==
+load 0
+gtxns Amount
+txna ApplicationArgs 0
+btoi
+int 101
+*
+int 100
+/
+>=
+&&
+load 0
+gtxns TypeEnum
+int pay
+==
+&&
+bnz main_l21
+load 0
+int 1
++
+store 0
+load 0
+int 1
++
+store 0
+b main_l16
+main_l21:
+itxn_begin
+int pay
+itxn_field TypeEnum
+txn Sender
+itxn_field Receiver
+txna ApplicationArgs 0
+btoi
+itxn_field Amount
+itxn_submit
+int 1
+return
+main_l22:
+load 0
+gtxns TypeEnum
+int appl
+==
+load 0
+gtxns ApplicationID
+global CurrentApplicationAddress
+btoi
+==
+&&
+bnz main_l27
+main_l23:
+int 1
+bnz main_l26
+int 0
+return
+main_l25:
+load 0
+int 1
++
+store 0
+b main_l14
+main_l26:
+load 0
+int 1
++
+store 0
+b main_l25
+main_l27:
+load 1
+int 1
+==
+bnz main_l29
+int 1
+store 1
+b main_l23
+main_l29:
+int 0
+return
+main_l30:
+txna ApplicationArgs 0
+btoi
+int 0
+byte "staked"
+app_local_get
+<=
+assert
+itxn_begin
+int pay
+itxn_field TypeEnum
+txn Sender
+itxn_field Receiver
+txna ApplicationArgs 0
+btoi
+itxn_field Amount
+itxn_submit
+int 0
+byte "staked"
+int 0
+byte "staked"
+app_local_get
+txna ApplicationArgs 0
+btoi
+-
+global MinTxnFee
+-
+app_local_put
+int 1
+return
+main_l31:
+gtxn 0 TypeEnum
+int pay
+==
+gtxn 0 Receiver
+global CurrentApplicationAddress
+==
+&&
+assert
+int 0
+byte "staked"
+int 0
+byte "staked"
+app_local_get
+gtxn 0 Amount
++
+app_local_put
+byte "total"
+byte "total"
+app_global_get
+gtxn 0 Amount
++
+app_global_put
+int 1
+return
+main_l32:
+int 0
+return
+main_l33:
+int 0
+return
+main_l34:
+itxn_begin
+int pay
+itxn_field TypeEnum
+txn Sender
+itxn_field Receiver
+int 0
+byte "staked"
+app_local_get
+global MinTxnFee
+-
+itxn_field Amount
+itxn_submit
+int 1
+return
+main_l35:
+gtxn 0 TypeEnum
+int pay
+==
+gtxn 0 Receiver
+global CurrentApplicationAddress
+==
+&&
+assert
+int 0
+byte "staked"
+gtxn 0 Amount
+app_local_put
+byte "total"
+byte "total"
+app_global_get
+gtxn 0 Amount
++
+app_global_put
+int 1
+return
+main_l36:
+byte "total"
+int 0
+app_global_put
+int 1
+return

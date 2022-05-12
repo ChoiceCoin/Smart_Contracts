@@ -40,6 +40,7 @@ This is where the random number is been chosen from 1 to 100 and if the user gue
 ### 🏃🏻 RUN STEPS
  - First of all make sure you have docker and sandbox installed and running, then make sure you have the algorand python sdk installed.  
  - And finally make sure you have your virtual environment created and activated.
+ - Then you can open `game.py` which is the main run file
 
 #### 💼 FOR IMPLEMENTING THIS CODE IN CHOICE COIN
 - You'll have to change the asset ID to thatof choice coin

@@ -1,1 +1,0 @@
-The contracts.py demonstrate an algogeneous smart contracts which makes a transactions after a user input of a selected role and wallet address. the transaction is processed only if the input is a developer else it prints 'you are not a dev'.

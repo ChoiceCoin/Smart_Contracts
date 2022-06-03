@@ -327,11 +327,8 @@ def get_transaction_info(
     :return: jsons: Transaction Infos
     """
     jsons = []
-    for txid in txids:
-        now = txids.index(txid) + 1
-        mot = len(txids)
-        num = round((now / mot) * 100, 3)
-        print(f'\rFetching infos...{num}% ', end='')
+    print("Fetching infos...")
+    for txid in txids: 
         try:
             req = f'/v2/transactions/{txid}'
             url = client.algod_address + req
@@ -344,6 +341,7 @@ def get_transaction_info(
                     break
         except Exception as e:
             print(e.args)
+    print("Fetching infos complete.")
     return jsons
 
 

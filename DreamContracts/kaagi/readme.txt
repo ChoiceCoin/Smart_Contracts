@@ -13,8 +13,8 @@ This folder contains the following:
 > download.py
 
 utils.py contains the functions needed to
-successfully perform an upload of a local file
-to the blockchain.
+successfully perform an upload and a download
+of a local file to the blockchain.
 
 upload.py contains a sample code demonstrating
 the upload process.
@@ -22,5 +22,13 @@ the upload process.
 download.py contains a sample code demonstrating
 the download process.
 
-To perform an upload, run upload.py.
+To perform a file upload, run upload.py.
 To perform a file download, run download.py.
+
+Additional notes:
+Any kind of file can be uploaded to the blockchain
+(e.g. .mp3, .pdf, .docx, .html, .mp4, etc.) but
+consider that larger files may take a significant 
+amount of time to upload. Even so, an error may
+be encountered when uploading large files (>6mb) in 
+size.

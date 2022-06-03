@@ -18,6 +18,10 @@ import os
 TEST_SENDER_MNEMONIC = os.environ['myprivkey']
 TEST_SENDER_PRIVATE_KEY = to_private_key(TEST_SENDER_MNEMONIC)
 TEST_SENDER_ADDRESS = address_from_private_key(TEST_SENDER_PRIVATE_KEY)
+ALGONODE_NODE_ADDRESS = "http://testnet-api.algonode.network"
+ALGONODE_INDX_ADDRESS = "http://testnet-idx.algonode.network"
+ALGOEXPL_NODE_ADDRESS = "https://node.testnet.algoexplorerapi.io"
+ALGOEXPL_INDX_ADDRESS = "https://algoindexer.testnet.algoexplorerapi.io"
 
 
 def init_post_client():
@@ -26,7 +30,7 @@ def init_post_client():
 
     :return: algod_client - AlgodClient (POST)
     """
-    algod_address = "https://node.testnet.algoexplorerapi.io"
+    algod_address = ALGONODE_NODE_ADDRESS
     algod_token = ''
     headers = {'User-Agent': 'algosdk'}
     algod_client = AlgodClient(algod_token, algod_address, headers)
@@ -39,7 +43,7 @@ def init_get_client():
 
     :return: algod_client - AlgodClient (GET)
     """
-    algod_address = "https://algoindexer.testnet.algoexplorerapi.io"
+    algod_address = ALGONODE_INDX_ADDRESS
     algod_token = ''
     headers = {'User-Agent': 'algosdk'}
     algod_client = AlgodClient(algod_token, algod_address, headers)
@@ -324,6 +328,10 @@ def get_transaction_info(
     """
     jsons = []
     for txid in txids:
+        now = txids.index(txid) + 1
+        mot = len(txids)
+        num = round((now / mot) * 100, 3)
+        print(f'\rFetching infos...{num}% ', end='')
         try:
             req = f'/v2/transactions/{txid}'
             url = client.algod_address + req
@@ -333,10 +341,6 @@ def get_transaction_info(
                 json_loaded = json.load(resp)
                 if len(str(json_loaded)) > 0 and str(json_loaded) != "()":
                     jsons.append(json_loaded)
-                    now = txids.index(txid) + 1
-                    mot = len(txids)
-                    num = round((now / mot) * 100, 3)
-                    print(f'\rFetching infos...{num}% ', end='')
                     break
         except Exception as e:
             print(e.args)

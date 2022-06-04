@@ -1,4 +1,4 @@
-"Kaagi" - A mechanism to upload and download files to and from the Algorand blockchain.
+"Kaagi" - Upload and download files to and from the Algorand blockchain.
 
 Important note: 
 

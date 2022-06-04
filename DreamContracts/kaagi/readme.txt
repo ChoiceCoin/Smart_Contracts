@@ -1,6 +1,7 @@
 "Kaagi" - A mechanism to upload and download files to and from the Algorand blockchain.
 
 Important note: 
+
 As it is known that Algorand blockchain is a permissionless, public blockchain,
 it is determined that all data in the blockchain are accessible by any user. Thus,
 kindly use this program at your own discretion. Uploading sensitive or private

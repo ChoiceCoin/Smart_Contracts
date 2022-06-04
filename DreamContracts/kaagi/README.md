@@ -12,12 +12,12 @@ is exactly the same with the original file.
 
 ## The Download
 The download works by using the generated Transaction ID from the upload to 
-"stitch" back the contents of the file. Once the stitched file is obtained, 
+"stitch" back the contents of the file. Once the stitched file is ready, 
 its hash is obtained and compared with that of the original file. If the two
 hashes are the same, the downloaded file is exactly the same with the file that
 was uploaded, hence achieving circularity in the process.
 
-## How to Use
+## Usage
 Use example.py to demonstrate the upload and download functions.
 
 ## Note

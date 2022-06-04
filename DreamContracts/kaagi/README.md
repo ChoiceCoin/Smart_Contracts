@@ -17,7 +17,7 @@ The download works by using the generated Transaction ID from the upload to
 as the file was finalized to be the same as the original file in the upload process.
 
 ## Usage
-Use example.py to demonstrate the upload and download functions.
+Download this repo and use example.py to demonstrate the upload and download functions.
 
 ## Note
 As it is known that Algorand blockchain is a permissionless, public blockchain,

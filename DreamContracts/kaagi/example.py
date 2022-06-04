@@ -30,7 +30,8 @@ def download_file(file_id: str):
 
 
 if __name__ == "__main__":
-
+    # Use the following to either
+    # do an upload or download
     """# Upload
     entered_fn = input("Enter filename: ")
     _file_id = upload_file(filename=entered_fn)"""

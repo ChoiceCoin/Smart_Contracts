@@ -14,7 +14,7 @@ to the blockchain is exactly the same with the original file, hence achieving ci
 ## The Download
 The download works by using the generated Transaction ID from the upload to 
 "stitch" back the contents of the file. There is no need to check for circularity 
-as the file was finalized to be the same as the original file in the upload process.
+as the file was finalized to be the same with the original file in the upload process.
 
 ## Usage
 Download this repo and use example.py to demonstrate the upload and download functions.

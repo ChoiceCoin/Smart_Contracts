@@ -9,7 +9,7 @@ import os
 
 from constants import *
 
-TEST_SENDER_MNEMONIC = os.environ['myprivkey']
+TEST_SENDER_MNEMONIC = os.environ['mymnemonic']
 TEST_SENDER_PRIVATE_KEY = to_private_key(TEST_SENDER_MNEMONIC)
 TEST_SENDER_ADDRESS = address_from_private_key(TEST_SENDER_PRIVATE_KEY)
 

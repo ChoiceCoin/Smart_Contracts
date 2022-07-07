@@ -1,4 +1,5 @@
-from util import *
+from util import init_get_client, search_note_by_txid, get_lines, get_txn_ids_from_txn_id
+import base64
 from checking import check_if_connection_exists
 from stitching import stitch_records
 

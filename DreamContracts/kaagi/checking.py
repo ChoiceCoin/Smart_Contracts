@@ -1,22 +1,19 @@
 import hashlib
 
 
-# Vital function to check if
-# the uploaded file and downloaded
-# file are exactly the same. This
-# is achieved through checking if
-# the hash of the uploaded data is
-# equal to the hash of the
-# downloaded data
+# Function to check if the uploaded file and the downloaded
+# file are exactly the same. This is achieved through checking if
+# the MD5 hash of the uploaded data is equal to the hash of the downloaded data
 def check_circular(original: str, stitched: str):
     """
-    Check if hashes of Original File and Downloaded File are
+    Check if the hashes of the Original File and the Downloaded File are
     the same. This is to check if the uploaded file is complete
     and is the same with the original file that has been uploaded.
 
-    :param original: The original file.
-    :param stitched: The downloaded file.
-    :return: Returns True if original and downloaded hashes are the same.
+    :param original: The original file
+    :param stitched: The downloaded file
+    
+    :return: True - hashes are the same
     """
     print(f'\nChecking circularity...')
     stitched_hash = hashlib.md5(stitched.encode()).hexdigest()
@@ -27,7 +24,7 @@ def check_circular(original: str, stitched: str):
     else:
         print(f'Length of original: {len(original)} Hash: {original_hash}')
         print(f'Length of stitched: {len(stitched)} Hash: {stitched_hash}')
-        print(f'Circularity not achieved. Trying again.')
+        print(f'Failed to achieve circularity.')
 
 
 # Check if the expected Transaction ID

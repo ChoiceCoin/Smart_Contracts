@@ -22,9 +22,9 @@ downloaded back using the transaction ID outputted from the upload process.
 
 ## Usage
 1. Download this folder.
-2. Install required packages via '''pip install -r requirements.txt'''.
+2. Install required packages via ```pip install -r requirements.txt```.
 3. Edit your Environment Variables -> add variable named "mymnemonic" with value which is your test account mnemonic. Make sure to fund this account with TestNet ALGOs via https://bank.testnet.algorand.network/.
-4. Run example.py through '''python example.py'''.
+4. Run example.py through ```python example.py```.
 
 Running example.py will let the user input 0 for download, 1 for upload. 
 If download is preferred, the program will ask for the File ID. On the other hand,

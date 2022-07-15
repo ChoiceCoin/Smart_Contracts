@@ -2,5 +2,5 @@
 Software for smart contracts.
 
 # Dependencies
-Algornad Javascript-SDK
-React
+- Algornad Javascript-SDK
+- React

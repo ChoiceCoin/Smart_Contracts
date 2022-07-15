@@ -1,4 +1,4 @@
-# Algogeneous Smart Contracts
+# Choice Coin Smart Contracts
 Software for smart contracts.
 
 # Dependencies

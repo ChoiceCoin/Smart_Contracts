@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+// Imports
 import './App.css';
+//import algosdk from "algosdk";
 
-// React Component
-// Components are essentially any reusable code that displays an interface to the screen
-// button, Page, or a table, etc.
-
+// Smart Contract
 function SmartContract() {
+   // Algorand Network Connection
+   const algod_token = {
+    'X-API-Key': ''
+  }
+  const algod_address = '';
+  const headers = '';
+  const ASSET_ID = 297995609;
+  //const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
+  const serviceAddress = ''
+
+  // Contract
   const contract = () => {
-    console.log("Smart Contract")
+    console.log('Smart Contract')
   }
   return (
     <button onClick={contract}>Submit Contract</button>
   )
-}
+};
+
+// Wallet Connect
+function WalletConnect() {
+  const wallet = () => {
+    console.log('Connect')
+  }
+  return(
+    <button onClick={wallet}>Connect Wallet</button>
+  )
+};
 
 // variable that holds a reference to a function
 const ContractPage = () => {
   return (
     <div>
+      <div>
+      <WalletConnect />
+      </div>
+      <div>
       <SmartContract />
+      </div>
     </div>
   )
 }
@@ -47,11 +71,9 @@ function App() {
           Signature:
         <input type="text" name="name" />
         </label>
-        
         <div>
         <ContractPage />
         </div>
-
       </header>
     </div>
   );

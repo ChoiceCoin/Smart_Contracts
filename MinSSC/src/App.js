@@ -33,20 +33,6 @@ function WalletConnect() {
   )
 };
 
-// variable that holds a reference to a function
-const ContractPage = () => {
-  return (
-    <div>
-      <div>
-      <WalletConnect />
-      </div>
-      <div>
-      <SmartContract />
-      </div>
-    </div>
-  )
-}
-
 // React functions must return a React component
 function App() {
   return (
@@ -72,7 +58,10 @@ function App() {
         <input type="text" name="name" />
         </label>
         <div>
-        <ContractPage />
+        <WalletConnect />
+        </div>
+        <div>
+        <SmartContract />
         </div>
       </header>
     </div>

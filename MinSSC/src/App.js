@@ -31,15 +31,22 @@ function App() {
         <h1>
           Choice Coin Smart Contract
         </h1>
-        <div>
-          Factor 1
-        </div>
-        <div>
-          Factor 2
-        </div>
-        <div>
-          Factor 3
-        </div>
+        <label>
+          First Party:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Second Party:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Terms:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Signature:
+        <input type="text" name="name" />
+        </label>
         
         <div>
         <ContractPage />

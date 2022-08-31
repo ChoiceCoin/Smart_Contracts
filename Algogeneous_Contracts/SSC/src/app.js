@@ -1,34 +1,73 @@
-import { Suspense } from "react";
+// Imports
+import './App.css';
+//import algosdk from "algosdk";
+import React, { Component }  from 'react';
 
+// Smart Contract
+function SmartContract() {
+   // Algorand Network Connection
+   const algod_token = {
+    'X-API-Key': ''
+  }
+  const algod_address = '';
+  const headers = '';
+  const ASSET_ID = 297995609;
+  //const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
+  const serviceAddress = ''
 
-import { Provider as ReduxProvider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-
-import AlertModal from "./statics/alertmodal";
-import WalletConfirmation from "./statics/walletConfirmation";
-import FormAlert from "./statics/formalert";
-import mainpage from "./mainpage";
-import stores from "./store/stores";
-
-const renderLoader = () => <p></p>;
-
-const App = () => {
-  const queryClient = new QueryClient();
+  // Contract
+  const contract = () => {
+    console.log('Smart Contract')
+  }
   return (
-    <Suspense fallback={renderLoader()}>
-      <ReduxProvider store={stores}>
-        <QueryClientProvider client={queryClient}>
-          <Router>
-            <MainPage />
-            <WalletConfirmation />
-            <FormAlert/>
-            <AlertModal />
-          </Router>
-        </QueryClientProvider>
-      </ReduxProvider>
-    </Suspense>
-  );
+    <button onClick={contract}>Submit Contract</button>
+  )
 };
+
+// Wallet Connect
+function WalletConnect() {
+  const wallet = () => {
+    console.log('Connect')
+  }
+  return(
+    <button onClick={wallet}>Connect Wallet</button>
+  )
+};
+
+// React functions must return a React component
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>
+          Choice Coin Smart Contract
+        </h1>
+        <label>
+          First Party:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Second Party:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Terms:
+        <input type="text" name="name" />
+        </label>
+        <label>
+          Signature:
+        <input type="text" name="name" />
+        </label>
+        <div>
+        <WalletConnect />
+        </div>
+        <div>
+        <SmartContract />
+        </div>
+      </header>
+    </div>
+  );
+
+}
 
 export default App;

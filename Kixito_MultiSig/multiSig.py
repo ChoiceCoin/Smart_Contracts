@@ -3,7 +3,7 @@ from algosdk import account, algod, encoding, mnemonic, transaction
 
 # test wallets accounts were created solely for this process
 
-mnemonic1 = "y"
+mnemonic1 = ""
 mnemonic2 = ""
 mnemonic3 = ""
 

@@ -3,9 +3,9 @@ from algosdk import account, algod, encoding, mnemonic, transaction
 
 # test wallets accounts were created solely for this process
 
-mnemonic1 = "upgrade arctic vanish connect title embody hair tornado bullet cry truck swear catalog rail rigid increase mandate cage frame isolate shadow fun choose able biology"
-mnemonic2 = "already six hello want allow vacuum three great city fetch slow protect describe secret digital mansion motion safe pair dog cool salmon brick about waste"
-mnemonic3 = "resource name track ivory peace account auto ship pony tape unhappy grief october island novel install toddler glide comfort mechanic differ disagree when above monkey"
+mnemonic1 = "y"
+mnemonic2 = ""
+mnemonic3 = ""
 
 
 

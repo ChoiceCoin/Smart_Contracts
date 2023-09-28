@@ -3,6 +3,8 @@ This Repository is dedicated to code for Alogrand Smart Contracts using Choice C
 
 [Overview on Choice Coin Smart Contracts](https://forum.algorand.org/t/choice-coin-smart-contracts/6798)
 
+[Defining Smart Contracts](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4574563)
+
 # Stateful
 Stateful refers to the contract’s ability to store information in a specific state on the network. For example, one type of stateful smart contract is a request payment function, allowing a user to request payment from another user. Generally, Stateful Smart Contracts are logical programs which store data on the blockchain.
 
